@@ -1,0 +1,50 @@
+<h3 class="text-center mt-4">APROBAR SOLICITUDES</h3>
+<hr>
+<div class="container"> 
+    <div class="row mb-4">
+        <div class="col-sm-6 col-md-6 col-lg-3 mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Proveedor: </label>
+            <select class="form-select"aria-label="Default select example">
+                <option value="1">La Calera</option>
+                <option value="2">Bimbo</option>
+            </select>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3 mt-4">            
+            <div class="d-grid">
+                <label for="exampleFormControlInput1" class="form-label"> </label>
+                <button class="btn btn-secondary fw-bold"type="button">Filtrar</button>
+            </div>
+        </div>
+    </div>  
+    <div class="row">
+        <table class="table table-hover text-center">
+            <thead class="table-primary">
+                <tr>
+                    <th scope="col">Proovedor</th>
+                    <th scope="col">Producto</th>
+                    <th scope="col">Precio Unitario</th>
+                    <th scope="col">Cantidad</th>       
+                    <th scope="col">Precio Total</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col">Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th></th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>Aprobado</td>
+                    <td>
+                        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                            <button type="button" class="btn btn-success"><i class="bi bi-pencil-square"></i>Aprobar</button>
+                            <!-- <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteAlumno" (click)="seleccionarAlumno(item)"><i class="bi bi-trash3"></i></button> -->
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

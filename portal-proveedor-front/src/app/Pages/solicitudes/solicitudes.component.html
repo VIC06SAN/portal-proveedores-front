@@ -1,0 +1,66 @@
+<h3 class="text-center mt-4">REGISTRAR SOLICITUDES</h3>
+<hr>
+<div class="container"> 
+    <form [formGroup]="formSolicitudes" id="formSolicitudes" (submit)="guardarSolicitudes()">
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-4 mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Proveedores: </label>
+                <select class="form-select" aria-label="Default select example" formControlName="proveedores_id" (change)="onOptionSelected($event)">
+                    <option [value]="" disabled>-- Seleccionar --</option>
+                    <!-- <option value="San Fernando">San Fernando</option>
+                    <option value="San Fernando">La Calera</option> -->
+                    <ng-container *ngFor="let item of listarProveedor">
+                        <option [value]="item.supplierId">{{ item.name }}</option>
+                    </ng-container>
+                </select>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-4 mb-3">
+                <label for="exampleFormControlInput2" class="form-label">Producto: </label>
+                <select class="form-select" aria-label="Default select example" formControlName="producto" (change)="onOptionSelected2($event)">
+                    <option [value]="" disabled>-- Seleccionar --</option>
+                    <option value="Huevos">San Fernando</option>
+                    <option value="Leche">La Calera</option>
+                    <!-- <ng-container *ngFor="let item of listaGrados">
+                        <option [value]="item.grado_id">{{ item.grado }}</option>
+                    </ng-container> -->
+                </select>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-4 mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Cantidad</label>
+                <input type="text" class="form-control" formControlName="cantidad" placeholder="Cantidad de Productos" (change)="onOptionSelected3($event)">
+            </div>
+            <!-- <div class="col-sm-6 col-md-6 col-lg-4 mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Precio Unitario</label>
+                <input type="text" class="form-control" formControlName="cantidad" placeholder="En soles" (change)="onOptionSelected4($event)">
+            </div> -->
+        </div>
+        <h5 class="my-4 ms-3 text-center">Datos de Solicitud</h5>
+        <hr>
+        <div class="row">
+            <table class="table table-hover text-center">
+                <thead class="table-primary">
+                    <tr>
+                        <th scope="col">Proovedor</th>
+                        <th scope="col">Producto</th>
+                        <th scope="col">Precio Unitario</th>
+                        <th scope="col">Cantidad</th>       
+                        <th scope="col">Precio Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>{{ selectedOption }}</th>
+                        <td>{{ selectedOption2 }}</td>
+                        <td>{{ selectedOption4 }}</td>
+                        <td>{{ selectedOption3 }}</td>
+                        <td>{{ selectedOption3 * selectedOption4 }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="d-grid gap-1 w-300 mx-auto my-4">
+                <button class="btn btn-secondary" type="submit" form="formSolicitudes">Mandar Compra</button>
+            </div>
+        </div>
+    </form>
+</div>
+

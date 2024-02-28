@@ -1,0 +1,39 @@
+<div class="container-lg" *ngIf="esAprobador">
+  <h3 class="text-center mt-4">BIENVENIDO APROBADOR</h3>
+  <hr>
+  <div class="row">
+    <div class="col-sm-6 col-md-6 col-lg-4 mt-3 mx-auto">
+      <div class="card text-center">
+        <div class="card-header fw-bolder h5">Aprobador</div>
+        <div class="card-body row">
+          <div class="col-6">
+            <span>Usuario: Agusto Bravo</span>
+          </div>
+          <div class="col-6">
+            <img src="../../../assets/img/colocador.png" style="width: 100%;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-lg" *ngIf="!esAprobador">
+  <h3 class="text-center mt-4">BIENVENIDO COLOCADOR</h3>
+  <hr>
+  <div class="row">
+    <div class="col-sm-6 col-md-6 col-lg-4 mt-3 mx-auto">
+      <div class="card text-center">
+        <div class="card-header fw-bolder h5">Colocador</div>
+        <div class="card-body row">
+          <div class="col-6">
+            <span>Usuario: Jorge Mendez</span>
+          </div>
+          <div class="col-6">
+            <img src="../../../assets/img/colocador.png" style="width: 100%;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="conteiner">
+    <div class="components">
+        <div class="body">
+            <img src="../../../assets/img/images.png" alt="img school">
+            <h3 class="mb-4 mt-2 font-weight-bold" style="color: white;">Inicio de Sesión</h3>
+            <div class="form-floating mb-4">
+                <input type="text" [(ngModel)]="usuario" class="form-control" placeholder="Ingrese Usuario">
+                <label>Usuario</label>
+            </div>
+            <div class="form-floating mb-4">
+                <input type="password" [(ngModel)]="clave" class="form-control" placeholder="Ingrese Contraseña">
+                <label>Contraseña</label>
+            </div>
+            <div class="d-grid gap-2 mb-4">
+                <button type="button" class="btn btn-success click" (click)="login()">Ingresar</button>
+            </div>
+        </div>     
+    </div>
+</div>
+

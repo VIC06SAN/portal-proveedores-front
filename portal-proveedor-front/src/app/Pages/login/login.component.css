@@ -1,0 +1,20 @@
+.conteiner{
+    background-color: #16284C;
+    height: 100%;
+}
+.components{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.body{
+    border-radius: 20px;
+    max-width: 520px;
+    width: 320px;
+    text-align: center;
+}
+.click:active{
+    position: relative;
+    top: 10px;
+}
